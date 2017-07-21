@@ -3,6 +3,7 @@ import Router from 'vue-router';
 import Hello from '@/components/Hello';
 import Test from '@/components/Test';
 import Dama from '@/components/dama/Board';
+import Tile from '@/components/Tile';
 
 Vue.use(Router);
 
@@ -22,6 +23,11 @@ export default new Router({
       path: '/dama',
       name: 'dama',
       component: Dama,
+    },
+    {
+      path: '/tile',
+      name: 'tile',
+      component: Tile,
     },
   ],
 });
