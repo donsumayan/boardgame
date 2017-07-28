@@ -1,15 +1,22 @@
-import Vue from 'vue';
+import vue from 'vue';
 import Router from 'vue-router';
-import Dama from '@/components/dama/game';
+import home from '@/components/home';
+import dama from '@/components/dama';
 
-Vue.use(Router);
+vue.use(Router);
 
 export default new Router({
   routes: [
     {
       path: '/',
+      name: 'home',
+      component: home,
+    },
+    {
+      path: '/dama',
       name: 'dama',
-      component: Dama,
+      component: dama,
     },
   ],
+  mode: 'history',
 });
